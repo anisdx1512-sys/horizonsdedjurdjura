@@ -13,5 +13,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "العنوان", name: "title", widget: "string"}
-      - {label: "الصورة", name: "thumbnail", widget: "image"}
+      - {label: "التاريخ", name: "date", widget: "datetime"}
+      - {label: "الصورة الرئيسية", name: "thumbnail", widget: "image"}
+      - {label: "ألبوم الصور (الأرشيف)", name: "gallery", widget: "list", field: {label: "صورة", name: "image", widget: "image"}, required: false}
       - {label: "التفاصيل", name: "body", widget: "markdown"}

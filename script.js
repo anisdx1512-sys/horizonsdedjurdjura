@@ -99,11 +99,10 @@ async function handleFormSubmit(e) {
     const formData = new FormData(form);
     
     // ⚠️ استبدل هذا الرابط برابطك الخاص (سنشرحه في الخطوة 3)
-    const response = await fetch('YOUR_API_ENDPOINT_HERE', {
-      method: 'POST',
-      headers: { 'Accept': 'application/json' },
-      body: formData
-    });
+    const response = await fetch('/submit', {
+  method: 'POST',
+  body: formData
+});
 
     if (response.ok) {
       // نجاح الإرسال

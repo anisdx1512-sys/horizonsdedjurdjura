@@ -498,10 +498,8 @@
       <div class="contact-form reveal">
         <h3><span data-lang="ar">أرسل لنا رسالة</span><span data-lang="fr">Envoyez-nous un message</span></h3>
 
-        <!-- Netlify Form -->
-        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm" onsubmit="handleNetlifySubmit(event)">
-          <input type="hidden" name="form-name" value="contact">
-          <p style="display:none"><input name="bot-field"></p>
+        <!-- CLOUDFLARE Form -->
+        <form id="contactForm" onsubmit="handleFormSubmit(event)">
 
           <div class="fg-row">
             <div class="fg">

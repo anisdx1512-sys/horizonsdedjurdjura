@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>جمعية آفاق جرجرة — Horizons de Djurdjura</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<!-- NAV -->
+<nav>
+  <a href="#home" class="nav-brand">
+    <img src="assets/images/logo.png" alt="شعار الجمعية">
+    <div class="nav-brand-text">
+      <div class="nav-brand-ar">آفاق جرجرة</div>
+      <div class="nav-brand-fr">Horizons de Djurdjura</div>
+    </div>
+  </a>
+  <div style="display:flex;align-items:center;gap:0.5rem;">
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('ar')" id="btn-ar">AR</button>
+      <button class="lang-btn" onclick="setLang('fr')" id="btn-fr">FR</button>
+    </div>
+    <ul class="nav-menu">
+      <li><a href="#about"><span data-lang="ar">من نحن</span><span data-lang="fr">Qui sommes-nous</span></a></li>
+      <li><a href="#clubs"><span data-lang="ar">نوادينا</span><span data-lang="fr">Nos Clubs</span></a></li>
+      <li><a href="#activities"><span data-lang="ar">أنشطتنا</span><span data-lang="fr">Activités</span></a></li>
+      <li><a href="#histoire"><span data-lang="ar">مسيرتنا</span><span data-lang="fr">Notre Parcours</span></a></li>
+      <li><a href="#achievements"><span data-lang="ar">إنجازاتنا</span><span data-lang="fr">Réalisations</span></a></li>
+      <li><a href="#contact" class="nav-cta"><span data-lang="ar">اتصل بنا</span><span data-lang="fr">Contact</span></a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-slogan-badge"><span data-lang="ar">✦ ولاية تيزي وزو — منذ 2010 ✦</span><span data-lang="fr">✦ Wilaya de Tizi-Ouzou — Depuis 2010 ✦</span></div>
+      <h1 class="hero-title">
+        <span data-lang="ar">جمعية آفاق جرجرة<em class="hero-title-accent" style="display:block">نحو آفاق بلا حدود</em></span><span data-lang="fr">Association Horizons de Djurdjura<em class="hero-title-accent" style="display:block;font-style:normal">Vers des horizons sans limites</em></span>
+      </h1>
+      <p class="hero-fr"><span data-lang="ar">الجمعية الثقافية — ولاية تيزي وزو</span><span data-lang="fr">Association Culturelle — Wilaya de Tizi-Ouzou</span></p>
+      <div class="hero-slogan">
+        <span data-lang="ar">من أجل تنمية شاملة<span style="color:var(--green-light);display:block;font-size:0.88rem">Pour un développement global</span></span><span data-lang="fr">Pour un développement global<span style="color:var(--green-light);display:block;font-size:0.88rem">من أجل تنمية شاملة</span></span>
+      </div>
+      <div class="hero-stats-row">
+        <div class="hstat"><span class="hstat-n">16+</span><div class="hstat-l"><span data-lang="ar">سنة نشاط</span><span data-lang="fr">Ans d'activité</span></div></div>
+        <div class="hstat"><span class="hstat-n">5</span><div class="hstat-l"><span data-lang="ar">نوادٍ متخصصة</span><span data-lang="fr">Clubs spécialisés</span></div></div>
+        <div class="hstat"><span class="hstat-n">2100+</span><div class="hstat-l"><span data-lang="ar">متابع رقمي</span><span data-lang="fr">Abonnés</span></div></div>
+        <div class="hstat"><span class="hstat-n">100+</span><div class="hstat-l"><span data-lang="ar">نشاط موثق</span><span data-lang="fr">Activités documentées</span></div></div>
+      </div>
+      <div class="hero-btns">
+        <a href="#clubs" class="btn-primary"><span data-lang="ar">اكتشف نوادينا ←</span><span data-lang="fr">Découvrir nos clubs →</span></a>
+        <a href="#contact" class="btn-secondary"><span data-lang="ar">انخرط معنا</span><span data-lang="fr">Rejoignez-nous</span></a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="logo-showcase">
+        <div class="logo-ring logo-ring-1"></div>
+        <div class="logo-ring logo-ring-2"></div>
+        <div class="logo-glow"></div>
+        <div class="logo-img-wrap">
+          <img src="assets/images/logo.png" alt="شعار جمعية آفاق جرجرة">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="section-inner">
+    <div class="about-layout">
+      <div class="about-body reveal">
+        <div class="section-header">
+          <div class="s-eyebrow"><span data-lang="ar">التعريف بالجمعية</span><span data-lang="fr">À propos</span></div>
+          <h2 class="s-title"><span data-lang="ar">من <em>نحن؟</em></span><span data-lang="fr">Qui <em>sommes-nous?</em></span></h2>
+          <div class="s-line"></div>
+        </div>
+        <p>
+          <span data-lang="ar"><strong><span data-lang="ar">الجمعية الثقافية لولاية تيزي وزو "آفاق جرجرة"</span><span data-lang="fr">Association Culturelle de la Wilaya de Tizi-Ouzou "Horizons de Djurdjura"</span></strong> هي جمعية ولائية ذات طابع ثقافي تعنى بالقضايا الثقافية تأسست سنة 2010، شعارها <em>"من أجل تنمية شاملة"</em>. تنشط في مجال الثقافة العلمية والفنية، وتنمية قدرات الشباب والأطفال من خلال شبكة من النوادي المتخصصة.</span><span data-lang="fr">L'<strong>Association Culturelle de la Wilaya de Tizi-Ouzou "Horizons de Djurdjura"</strong> est une association bénévole à but non lucratif fondée en 2010, avec comme devise <em>"Pour un développement global"</em>. Elle œuvre dans le domaine de la culture scientifique et artistique, et le développement des capacités des jeunes et des enfants à travers un réseau de clubs spécialisés.</span>
+        </p>
+        <p>
+          <span data-lang="ar">تؤمن الجمعية بأن التنمية الحقيقية تبدأ من الإنسان — من تنمية فضوله المعرفي، إبداعه الفني، وانتمائه لمحيطه الطبيعي والثقافي     .</span><span data-lang="fr">L'association croit que le vrai développement commence par l'être humain — en cultivant sa curiosité intellectuelle, sa créativité artistique et son appartenance à son environnement naturel et culturel au cœur de la région de Djurdjura.</span>
+        </p>
+        <p>
+          <span data-lang="ar">معترف بها وطنياً من طرف وزارة الشباب، وحائزة على تكريم رسمي سنة 2025 تقديراً لمساهماتها في إثراء الحركة الجمعوية الشبابية بولاية تيزي وزو.</span><span data-lang="fr">Reconnue au niveau national par le Ministère de la Jeunesse et lauréate d'une distinction officielle en 2025, en reconnaissance de ses contributions à l'enrichissement du mouvement associatif jeunesse de la Wilaya de Tizi-Ouzou.</span>
+        </p>
+        <div class="about-pillars">
+          <div class="pillar">
+            <div class="pillar-icon">🔭</div>
+            <div class="pillar-name"><span data-lang="ar">العلم والابتكار</span><span data-lang="fr">Science &amp; Innovation</span></div>
+            <div class="pillar-desc"><span data-lang="ar">تنمية الفضول العلمي وروح البحث لدى الشباب</span><span data-lang="fr">Développer la curiosité scientifique des jeunes</span></div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🎭</div>
+            <div class="pillar-name"><span data-lang="ar">الفن والإبداع</span><span data-lang="fr">Art &amp; Créativité</span></div>
+            <div class="pillar-desc"><span data-lang="ar">تشجيع التعبير الفني والثقافي بأشكاله المتعددة</span><span data-lang="fr">Encourager l'expression artistique et culturelle</span></div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🤝</div>
+            <div class="pillar-name"><span data-lang="ar">التطوع والمواطنة</span><span data-lang="fr">Bénévolat &amp; Citoyenneté</span></div>
+            <div class="pillar-desc"><span data-lang="ar">بناء جيل مسؤول ومنخرط في محيطه</span><span data-lang="fr">Former une génération responsable et engagée</span></div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🏔️</div>
+            <div class="pillar-name"><span data-lang="ar">الانتماء لجرجرة</span><span data-lang="fr">Appartenance à Djurdjura</span></div>
+            <div class="pillar-desc"><span data-lang="ar">الفخر بالإرث الطبيعي والثقافي للمنطقة</span><span data-lang="fr">Valoriser le patrimoine naturel et culturel</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="about-card">
+          <div class="about-card-logo">
+            <img src="assets/images/about-logo.png" alt="شعار الجمعية">
+          </div>
+          <h3><span data-lang="ar">البطاقة الرسمية للجمعية</span><span data-lang="fr">Fiche officielle de l'association</span></h3>
+          <div class="info-row">
+            <div class="info-dot"></div>
+            <div class="info-text">
+              <span class="info-label"><span data-lang="ar">الاسم الرسمي</span><span data-lang="fr">Nom officiel</span></span>
+              <span data-lang="ar">الجمعية الثقافية لولاية تيزي وزو "آفاق جرجرة"</span><span data-lang="fr">Association Culturelle de la Wilaya de Tizi-Ouzou "Horizons de Djurdjura"</span>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-dot"></div>
+            <div class="info-text">
+              <span class="info-label"><span data-lang="ar">رقم الاعتماد</span><span data-lang="fr">N° d'agrément</span></span>
+              48/D.R.A.G/S.R.G/B.E.A — 16 مارس 2010
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-dot"></div>
+            <div class="info-text">
+              <span class="info-label"><span data-lang="ar">المقر الرئيسي</span><span data-lang="fr">Siège social</span></span>
+              <span data-lang="ar">الشارع الرئيسي، رقم 64، بوخالفة، تيزي وزو</span><span data-lang="fr">Rue principale N°64, Boukhalf, Tizi-Ouzou</span>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-dot"></div>
+            <div class="info-text">
+              <span class="info-label"><span data-lang="ar">الطابع والهدف</span><span data-lang="fr">Caractère &amp; Objectif</span></span>
+              <span data-lang="ar">جمعية ثقافية ولائية — من أجل تنمية شاملة</span><span data-lang="fr">Association culturelle de wilaya — Pour un développement global</span>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-dot"></div>
+            <div class="info-text">
+              <span class="info-label"><span data-lang="ar">الرئيس</span><span data-lang="fr">Président</span></span>
+              ليتيمي مراد
+            </div>
+          </div>
+          <div class="about-founded">
+            <div class="founded-year">2010</div>
+            <div class="founded-label"><span data-lang="ar">سنة التأسيس</span><span data-lang="fr">Année de fondation</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="section" id="histoire" style="background: linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 60%, var(--green) 100%); padding: 4rem 3rem;">
+  <div class="section-inner">
+    <div class="section-header center reveal" style="margin-bottom:2.5rem;">
+      <div class="s-eyebrow" style="background:rgba(46,204,113,0.12);border-color:rgba(46,204,113,0.3);color:#7fffb2;">
+        <span data-lang="ar">مسيرتنا عبر الزمن</span><span data-lang="fr">Notre parcours à travers le temps</span>
+      </div>
+      <h2 class="s-title" style="color:white;">
+        <span data-lang="ar">16 سنة من <em>العطاء والإنجاز</em></span>
+        <span data-lang="fr">16 ans d'<em>engagement et de réalisations</em></span>
+      </h2>
+      <div class="s-line"></div>
+    </div>
+    <div class="timeline-vertical reveal">
+      <div class="tv-item">
+        <div class="tv-year">2010</div>
+        <div class="tv-dot"></div>
+        <div class="tv-content">
+          <span data-lang="ar">تأسيس الجمعية الثقافية "آفاق جرجرة" — اعتماد رقم 48/D.R.A.G — إطلاق أولى الأنشطة الثقافية ببوخالفة</span>
+          <span data-lang="fr">Fondation de l'association "Horizons de Djurdjura" — Agrément N°48/D.R.A.G — Lancement des premières activités culturelles</span>
+        </div>
+      </div>
+      <div class="tv-item">
+        <div class="tv-year">2011</div>
+        <div class="tv-dot"></div>
+        <div class="tv-content">
+          <span data-lang="ar">18 نشاط موثق — دعم مدرسي لـ 170 تلميذ — إطلاق نوادي الفلك والمسرح والتجميع — مشروع "مشعل المعرفة" بتمويل وزارة الشباب</span>
+          <span data-lang="fr">18 activités documentées — Soutien scolaire pour 170 élèves — Lancement des clubs astronomie, théâtre et collection — Projet "Flambeau du Savoir"</span>
+        </div>
+      </div>
+      <div class="tv-item">
+        <div class="tv-year">2012</div>
+        <div class="tv-dot"></div>
+        <div class="tv-content">
+          <span data-lang="ar">200+ مستفيد من الدعم المدرسي — 16 أستاذ متطوع — تمثيل الولاية في الصالون الوطني للجمعيات بتيسمسيلت</span>
+          <span data-lang="fr">200+ bénéficiaires du soutien scolaire — 16 enseignants bénévoles — Représentation au Salon National des Associations à Tissemsilt</span>
+        </div>
+      </div>
+      <div class="tv-item">
+        <div class="tv-year">2013</div>
+        <div class="tv-dot"></div>
+        <div class="tv-content">
+          <span data-lang="ar">المشاركة في اللقاء الجهوي لولايات الوسط بحضور وزير الشباب — تقديم واقع الجمعيات وآليات تطوير الحركة الجمعوية</span>
+          <span data-lang="fr">Participation à la rencontre régionale des wilayas du centre en présence du Ministre de la Jeunesse — Présentation du mouvement associatif</span>
+        </div>
+      </div>
+      <div class="tv-item">
+        <div class="tv-year">2014</div>
+        <div class="tv-dot"></div>
+        <div class="tv-content">
+          <span data-lang="ar">المشاركة في اللقاء الوطني الـ5 للفلك (28 ولاية) — إطلاق حملات زيارة أطفال المستشفيات — حملة التوعية من الآفات الاجتماعية بتمويل وزاري</span>
+          <span data-lang="fr">5ème rencontre nationale d'astronomie (28 wilayas) — Visites aux enfants hospitalisés — Campagne contre les fléaux sociaux financée par le ministère</span>
+        </div>
+      </div>
+      <div class="tv-item">
+        <div class="tv-year">2016</div>
+        <div class="tv-dot"></div>
+        <div class="tv-content">
+          <span data-lang="ar">إعادة إطلاق نادي الفلك بشكل منظم — إنشاء نادي الأحياء المائية — رصد ظاهرة تحاذي الكواكب النادرة بآث يني (كل 10 سنوات)</span>
+          <span data-lang="fr">Relance structurée du club astronomie — Création du club aquariophilie — Observation de l'alignement planétaire rare à Ath Yanni (tous les 10 ans)</span>
+        </div>
+      </div>
+      <div class="tv-item">
+        <div class="tv-year">2018</div>
+        <div class="tv-dot"></div>
+        <div class="tv-content">
+          <span data-lang="ar">🥈 المركز الثاني في أولمبياد الفلك الوطني بمستغانم — مخيم وطني شمل 7 ولايات — المشاركة في مهرجان التين الشوكي ببوزڤان — 32+ نشاط</span>
+          <span data-lang="fr">🥈 2ème place aux Olympiades nationales d'astronomie à Mostaganem — Camp national dans 7 wilayas — Festival de la figue de Barbarie à Bouzeguene — 32+ activités</span>
+        </div>
+      </div>
+      <div class="tv-item">
+        <div class="tv-year">2019</div>
+        <div class="tv-dot"></div>
+        <div class="tv-content">
+          <span data-lang="ar">أول ملتقى وطني للمتطوعين بأزفون — توزيع 453 مصحفاً على 7 مستشفيات في رمضان — 160 قفة رمضان للأسر المحتاجة — اللقاء الوطني الـ8 للفلك بأم البواقي</span>
+          <span data-lang="fr">1er colloque national des bénévoles à Azeffoun — 453 Corans distribués dans 7 hôpitaux — 160 couffins Ramadhan — 8ème rencontre nationale astronomie à Oum El Bouaghi</span>
+        </div>
+      </div>
+      <div class="tv-item">
+        <div class="tv-year">2023</div>
+        <div class="tv-dot"></div>
+        <div class="tv-content">
+          <span data-lang="ar">المشاركة في 7 صالونات وطنية للفلك — مسابقة علمية لـ4 مدارس ابتدائية — حضور في ولايات: أم البواقي، قسنطينة، سطيف، تيزي وزو</span>
+          <span data-lang="fr">Participation à 7 salons nationaux d'astronomie — Concours scientifique pour 4 écoles primaires — Présence à Oum El Bouaghi, Constantine, Sétif, Tizi-Ouzou</span>
+        </div>
+      </div>
+      <div class="tv-item">
+        <div class="tv-year">2025</div>
+        <div class="tv-dot tv-dot-gold"></div>
+        <div class="tv-content">
+          <span data-lang="ar">⭐ تكريم رسمي من وزارة الشباب — اللقاء الوطني الثاني لهواة الفلك (رعاية وزير الشباب) — الصالون الجهوي بميلة — الصالون الوطني بتيسمسيلت (الطبعة العاشرة)</span>
+          <span data-lang="fr">⭐ Distinction officielle du Ministère de la Jeunesse — 2ème rencontre nationale des astronomes (sous patronage du Ministre) — Salon régional à Mila — Salon national à Tissemsilt (10ème édition)</span>
+        </div>
+      </div>
+      <div class="tv-item">
+        <div class="tv-year" style="background:var(--green);color:white;">2026</div>
+        <div class="tv-dot tv-dot-green"></div>
+        <div class="tv-content" style="border-color:rgba(46,204,113,0.3);">
+          <span data-lang="ar">🚀 مشروع توطين نادي الفلك في مؤسسات الشباب — الذكرى الـ16 للتأسيس</span>
+          <span data-lang="fr">🚀 Projet d'ancrage du club d'astronomie dans les maisons de jeunes — Dossier de financement ministériel — 16ème anniversaire de la fondation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLUBS -->
+<section class="section" id="clubs">
+  <div class="section-inner">
+    <div class="section-header center reveal">
+      <div class="s-eyebrow"><span data-lang="ar">نوادي الجمعية</span><span data-lang="fr">Nos clubs</span></div>
+      <h2 class="s-title"><span data-lang="ar">نوادينا <em>المتخصصة</em></span><span data-lang="fr">Nos clubs <em>spécialisés</em></span></h2>
+      <div class="s-line"></div>
+      <p class="s-desc">
+        <span data-lang="ar">تمتلك جمعية آفاق جرجرة شبكة من النوادي المتخصصة التي تستهدف الشباب من مختلف الاهتمامات والمواهب</span><span data-lang="fr">L'association Horizons de Djurdjura dispose d'un réseau de clubs spécialisés ciblant les jeunes aux intérêts et talents variés</span>
+      </p>
+    </div>
+    <div class="clubs-grid">
+
+      <!-- FEATURED: ASTRONOMY -->
+      <div class="club-card c-astronomy featured reveal">
+        <div class="club-card-banner">🔭</div>
+        <div class="club-card-body">
+          <h3>نادي آفاق للفلك — Club d'Astronomie</h3>
+          <p>
+            <span data-lang="ar">. ينظم جلسات رصد ليلية، ورشات علمية تطبيقية، وسهرات فلكية على جبال جرجرة. يمتلك تلسكوبين Bresser 130/650 EQ ومعدات رصد متطورة. معترف به على المستوى الوطني.</span><span data-lang="fr">Le seul club d'astronomie actif de la Wilaya de Tizi-Ouzou. Organise des sessions d'observation nocturne, des ateliers scientifiques, et des soirées astronomiques sur les montagnes de Djurdjura. Dispose de deux télescopes Bresser 130/650 EQ.</span>
+          </p>
+          <div class="featured-achievements">
+            <span class="feat-tag">🥇 اللقاء الوطني للفلك 2025</span>
+            <span class="feat-tag">🏅 الصالون الجهوي — ميلة 2025</span>
+            <span class="feat-tag">⭐ تكريم وزارة الشباب 2025</span>
+            <span class="feat-tag">🥇 2016 المهرجان الوطني الخامس للأنشطة العلمية والفلكية للأطفال أم البواقي</span>
+            <span class="feat-tag">🏅 االمعرض الوطني لعلم الفلك سطيف 2016</span>
+            <span class="feat-tag">⭐ 2014 اللقاء الوطني لعلم الفلك </span>
+            <span class="feat-tag">🔭 10+ جلسات رصد سنوياً</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- THEATRE -->
+      <div class="club-card c-theatre reveal">
+        <div class="club-card-banner">🎭</div>
+        <div class="club-card-body">
+          <h3><span data-lang="ar">نادي المسرح</span><span data-lang="fr">Club Théâtre</span></h3>
+          <p><span data-lang="ar">ورشات مسرح العرائس، التمثيل، والفنون الأدائية. يستهدف الأطفال والشباب لتنمية مهارات التعبير والإبداع.</span><span data-lang="fr">Ateliers de théâtre de marionnettes, jeu d'acteur et arts de la scène. Cible les enfants et les jeunes pour développer l'expression et la créativité.</span></p>
+          <span class="club-badge"><span data-lang="ar">فن وإبداع</span><span data-lang="fr">Art &amp; Création</span></span>
+        </div>
+      </div>
+
+      <!-- AUDIOVISUEL -->
+      <div class="club-card c-audiovisual reveal">
+        <div class="club-card-banner">🎬</div>
+        <div class="club-card-body">
+          <h3>نادي السمعي البصري — Club Audiovisuel</h3>
+          <p><span data-lang="ar">تكوين الشباب في التصوير الفوتوغرافي، إنتاج الفيديو، والمونتاج. صناعة المحتوى الهادف والتوثيق الإعلامي.</span><span data-lang="fr">Formation des jeunes en photographie, production vidéo et montage. Création de contenu pertinent et documentation médiatique.</span></p>
+          <span class="club-badge"><span data-lang="ar">إعلام رقمي</span><span data-lang="fr">Médias numériques</span></span>
+        </div>
+      </div>
+
+      <!-- AQUARIOPHILIE -->
+      <div class="club-card c-aqua reveal">
+        <div class="club-card-banner">🐠</div>
+        <div class="club-card-body">
+          <h3>نادي الأحياء المائية — Aquariophilie</h3>
+          <p><span data-lang="ar">استكشاف عالم الأسماك والأحياء المائية. تنمية الوعي البيئي والاهتمام بالطبيعة لدى الشباب.</span><span data-lang="fr">Exploration du monde aquatique et des poissons. Développement de la conscience environnementale et de l'amour de la nature.</span></p>
+          <span class="club-badge"><span data-lang="ar">طبيعة وبيئة</span><span data-lang="fr">Nature &amp; Environnement</span></span>
+        </div>
+      </div>
+
+      <!-- COLLECTION -->
+      <div class="club-card c-collect reveal">
+        <div class="club-card-banner">🪙</div>
+        <div class="club-card-body">
+          <h3><span data-lang="ar">نادي التجميع</span><span data-lang="fr">Club Collection</span></h3>
+          <p><span data-lang="ar">جمع وتصنيف الطوابع البريدية، الأحجار النادرة، والعملات من مختلف دول العالم. تنمية روح البحث والاكتشاف.</span><span data-lang="fr">Collection et classification de timbres, pierres rares et monnaies du monde entier. Développement de l'esprit de recherche et de découverte.</span></p>
+          <span class="club-badge"><span data-lang="ar">تراث وتجميع</span><span data-lang="fr">Patrimoine &amp; Collection</span></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ACTIVITIES -->
+<section class="section" id="activities">
+  <div class="section-inner">
+    <div class="section-header center reveal">
+      <div class="s-eyebrow"><span data-lang="ar">ما نفعله</span><span data-lang="fr">Ce que nous faisons</span></div>
+      <h2 class="s-title"><span data-lang="ar">أنشطة <em>الجمعية</em></span><span data-lang="fr">Activités <em>de l'association</em></span></h2>
+      <div class="s-line"></div>
+    </div>
+    <div class="activities-layout">
+      <div class="act-card reveal">
+        <span class="act-icon">⛺</span>
+        <div class="act-name"><span data-lang="ar">المخيمات الشبابية</span><span data-lang="fr">Camps de Jeunesse</span></div>
+        <div class="act-desc"><span data-lang="ar">المشاركة في موسم المخيمات الصيفية وتأطير الأطفال بمراكز قضاء العطل</span><span data-lang="fr">Participation aux camps d'été et encadrement des enfants dans les centres de vacances</span></div>
+      </div>
+      <div class="act-card reveal">
+        <span class="act-icon">📚</span>
+        <div class="act-name"><span data-lang="ar">الدعم التربوي</span><span data-lang="fr">Soutien Scolaire</span></div>
+        <div class="act-desc"><span data-lang="ar">دروس دعم مجانية لتلاميذ البكالوريا بإشراف أساتذة متطوعين</span><span data-lang="fr">Cours de soutien gratuits pour les élèves du baccalauréat encadrés par des enseignants bénévoles</span></div>
+      </div>
+      <div class="act-card reveal">
+        <span class="act-icon">🌿</span>
+        <div class="act-name"><span data-lang="ar">البيئة والتشجير</span><span data-lang="fr">Environnement</span></div>
+        <div class="act-desc"><span data-lang="ar">حملات تشجير والمشاركة في المبادرة الوطنية لغرس مليون شجرة</span><span data-lang="fr">Campagnes de reboisement et participation à l'initiative nationale de plantation d'un million d'arbres</span></div>
+      </div>
+      <div class="act-card reveal">
+        <span class="act-icon">🎪</span>
+        <div class="act-name"><span data-lang="ar">المهرجانات الثقافية</span><span data-lang="fr">Festivals Culturels</span></div>
+        <div class="act-desc"><span data-lang="ar">المشاركة في مهرجانات القراءة والأيام الثقافية المحلية</span><span data-lang="fr">Participation aux festivals de lecture et aux journées culturelles locales</span></div>
+      </div>
+      <div class="act-card reveal">
+        <span class="act-icon">🏆</span>
+        <div class="act-name"><span data-lang="ar">الملتقيات الوطنية</span><span data-lang="fr">Rencontres Nationales</span></div>
+        <div class="act-desc"><span data-lang="ar">التمثيل في الصالونات والملتقيات العلمية على المستوى الوطني</span><span data-lang="fr">Représentation dans les salons et rencontres scientifiques au niveau national</span></div>
+      </div>
+      <div class="act-card reveal">
+        <span class="act-icon">🎓</span>
+        <div class="act-name"><span data-lang="ar">ورشات التكوين</span><span data-lang="fr">Ateliers de Formation</span></div>
+        <div class="act-desc"><span data-lang="ar">ورشات متخصصة في مختلف المجالات لتنمية مهارات الشباب</span><span data-lang="fr">Ateliers spécialisés dans divers domaines pour développer les compétences des jeunes</span></div>
+      </div>
+      <div class="act-card reveal">
+        <span class="act-icon">🇩🇿</span>
+        <div class="act-name"><span data-lang="ar">الاحتفاليات الوطنية</span><span data-lang="fr">Commémorations Nationales</span></div>
+        <div class="act-desc"><span data-lang="ar">المشاركة في الاحتفالات الوطنية ونشر قيم المواطنة والانتماء</span><span data-lang="fr">Participation aux commémorations nationales et diffusion des valeurs citoyennes</span></div>
+      </div>
+      <div class="act-card reveal">
+        <span class="act-icon">📱</span>
+        <div class="act-name"><span data-lang="ar">التوثيق الرقمي</span><span data-lang="fr">Documentation Numérique</span></div>
+        <div class="act-desc"><span data-lang="ar">نشر الأنشطة والمبادرات عبر منصات التواصل الاجتماعي</span><span data-lang="fr">Publication des activités et initiatives sur les réseaux sociaux</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="achievements-inner">
+    <div class="reveal">
+      <h2 class="ach-title"><span data-lang="ar">إنجازات <em>بارزة</em></span><span data-lang="fr">Réalisations <em>marquantes</em></span></h2>
+    </div>
+    <div class="ach-grid reveal">
+      <div class="ach-item">
+        <div class="ach-icon-wrap">🥇</div>
+        <div class="ach-text">
+          <span class="ach-year">جويلية 2025</span>
+          المشاركة في اللقاء الوطني الثاني لهواة علم الفلك — تحت رعاية وزير الشباب
+        </div>
+      </div>
+      <div class="ach-item">
+        <div class="ach-icon-wrap">🏅</div>
+        <div class="ach-text">
+          <span class="ach-year">أكتوبر 2025</span>
+          شهادة تقدير من الصالون الجهوي لعلم الفلك بولاية ميلة
+        </div>
+      </div>
+      <div class="ach-item">
+        <div class="ach-icon-wrap">⭐</div>
+        <div class="ach-text">
+          <span class="ach-year">سبتمبر 2025</span>
+          تكريم رسمي من وزارة الشباب في حفل اختتام المخيمات الصيفية
+        </div>
+      </div>
+      <div class="ach-item">
+        <div class="ach-icon-wrap">🌍</div>
+        <div class="ach-text">
+          <span class="ach-year">جويلية 2025</span>
+          المشاركة في الصالون الوطني للشباب بتيسمسيلت — الطبعة العاشرة
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="section-inner">
+    <div class="section-header center reveal">
+      <div class="s-eyebrow"><span data-lang="ar">تواصل معنا</span><span data-lang="fr">Contactez-nous</span></div>
+      <h2 class="s-title"><span data-lang="ar">اتصل <em>بنا</em></span><span data-lang="fr"><em>Contactez-nous</em></span></h2>
+      <div class="s-line"></div>
+    </div>
+    <div class="contact-layout">
+      <div class="reveal">
+        <div class="contact-card">
+          <img src="assets/images/logo.png" alt="شعار جمعية آفاق جرجرة">
+          </div>
+          <h3>جمعية آفاق جرجرة</h3>
+          <p class="slogan-line"><span data-lang="ar">من أجل تنمية شاملة — Pour un développement global</span><span data-lang="fr">Pour un développement global — من أجل تنمية شاملة</span></p>
+          <div class="cinfo">
+            <div class="cinfo-icon">📍</div>
+            <div class="cinfo-content">
+              <strong><span data-lang="ar">العنوان</span><span data-lang="fr">Adresse</span></strong>
+              <span><span data-lang="ar">الشارع الرئيسي، رقم 64، بوخالفة، تيزي وزو</span><span data-lang="fr">Rue principale N°64, Boukhalf, Tizi-Ouzou</span></span>
+            </div>
+          </div>
+          <div class="cinfo">
+            <div class="cinfo-icon">📞</div>
+            <div class="cinfo-content">
+              <strong><span data-lang="ar">الهاتف</span><span data-lang="fr">Téléphone</span></strong>
+              <span>0556 88 91 45 — 0660 44 03 82</span>
+            </div>
+          </div>
+          <div class="cinfo">
+            <div class="cinfo-icon">✉️</div>
+            <div class="cinfo-content">
+              <strong><span data-lang="ar">البريد الإلكتروني</span><span data-lang="fr">Email</span></strong>
+              <span>horizonsdedjurdjura15@gmail.com</span>
+            </div>
+          </div>
+          <div class="cinfo">
+            <div class="cinfo-icon">🕐</div>
+            <div class="cinfo-content">
+              <strong><span data-lang="ar">أوقات الاستقبال</span><span data-lang="fr">Horaires d'accueil</span></strong>
+              <span><span data-lang="ar">الجمعة والسبت: 09:00 — 16:00</span><span data-lang="fr">Vendredi et Samedi: 09:00 — 16:00</span></span>
+            </div>
+          </div>
+          <div class="social-row">
+            <a href="https://www.facebook.com/share/17RuTPxr42/" target="_blank" class="soc-btn">📘 فيسبوك</a>
+            <a href="https://www.instagram.com/horizonsdedjurdjura" target="_blank" class="soc-btn">📸 إنستغرام</a>
+            <a href="https://www.tiktok.com/@horizons.de.djurdura" target="_blank" class="soc-btn">🎵 تيك توك</a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form reveal">
+        <h3><span data-lang="ar">أرسل لنا رسالة</span><span data-lang="fr">Envoyez-nous un message</span></h3>
+
+        <!-- Netlify Form -->
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm" onsubmit="handleNetlifySubmit(event)">
+          <input type="hidden" name="form-name" value="contact">
+          <p style="display:none"><input name="bot-field"></p>
+
+          <div class="fg-row">
+            <div class="fg">
+              <label><span data-lang="ar">الاسم واللقب *</span><span data-lang="fr">Nom et prénom *</span></label>
+              <input type="text" name="name" required placeholder="اسمك الكامل" id="inp-name">
+            </div>
+            <div class="fg">
+              <label><span data-lang="ar">الهاتف</span><span data-lang="fr">Téléphone</span></label>
+              <input type="tel" name="phone" placeholder="05XXXXXXXX">
+            </div>
+          </div>
+
+          <div class="fg">
+            <label><span data-lang="ar">البريد الإلكتروني *</span><span data-lang="fr">Email *</span></label>
+            <input type="email" name="email" required placeholder="example@email.com">
+          </div>
+
+          <div class="fg">
+            <label><span data-lang="ar">موضوع الرسالة</span><span data-lang="fr">Objet du message</span></label>
+            <select name="subject" id="inp-subject">
+              <option value="" data-ar="اختر الموضوع..." data-fr="Choisir un sujet...">اختر الموضوع...</option>
+              <option value="adhesion" data-ar="الانخراط في الجمعية" data-fr="Adhésion à l'association">الانخراط في الجمعية</option>
+              <option value="astronomie" data-ar="نادي علم الفلك" data-fr="Club d'Astronomie">نادي علم الفلك</option>
+              <option value="theatre" data-ar="نادي المسرح" data-fr="Club Théâtre">نادي المسرح</option>
+              <option value="audiovisuel" data-ar="نادي السمعي البصري" data-fr="Club Audiovisuel">نادي السمعي البصري</option>
+              <option value="aqua" data-ar="نادي الأحياء المائية" data-fr="Club Aquariophilie">نادي الأحياء المائية</option>
+              <option value="collection" data-ar="نادي التجميع" data-fr="Club Collection">نادي التجميع</option>
+              <option value="soutien" data-ar="الدعم التربوي المجاني" data-fr="Soutien scolaire gratuit">الدعم التربوي المجاني</option>
+              <option value="partenariat" data-ar="شراكة وتعاون" data-fr="Partenariat et coopération">شراكة وتعاون</option>
+              <option value="autre" data-ar="استفسار عام" data-fr="Renseignement général">استفسار عام</option>
+            </select>
+          </div>
+
+          <div class="fg">
+            <label><span data-lang="ar">رسالتك *</span><span data-lang="fr">Votre message *</span></label>
+            <textarea name="message" required id="inp-message" placeholder="اكتب رسالتك هنا..."></textarea>
+          </div>
+
+          <!-- Submit button -->
+          <button type="submit" class="btn-send" id="btn-submit">
+            <span id="btn-text"><span data-lang="ar">إرسال الرسالة ←</span><span data-lang="fr">Envoyer le message →</span></span>
+            <span id="btn-spinner" style="display:none">⏳</span>
+          </button>
+        </form>
+
+        <!-- Success message -->
+        <div class="form-success-box" id="form-success" style="display:none">
+          <div class="fsb-icon">✅</div>
+          <div class="fsb-title"><span data-lang="ar">تم إرسال رسالتك بنجاح!</span><span data-lang="fr">Message envoyé avec succès!</span></div>
+          <div class="fsb-sub"><span data-lang="ar">سنتواصل معك في أقرب وقت ممكن على بريدك الإلكتروني أو هاتفك.</span><span data-lang="fr">Nous vous contacterons dans les plus brefs délais par email ou téléphone.</span></div>
+          <button class="btn-new-msg" onclick="resetForm()"><span data-lang="ar">إرسال رسالة أخرى</span><span data-lang="fr">Envoyer un autre message</span></button>
+        </div>
+
+        <!-- Error message -->
+        <div class="form-error-box" id="form-error" style="display:none">
+          <div class="fsb-icon">❌</div>
+          <div class="fsb-title"><span data-lang="ar">حدث خطأ أثناء الإرسال</span><span data-lang="fr">Erreur lors de l'envoi</span></div>
+          <div class="fsb-sub"><span data-lang="ar">يرجى المحاولة مجدداً أو التواصل معنا مباشرةً عبر الهاتف.</span><span data-lang="fr">Veuillez réessayer ou nous contacter directement par téléphone.</span></div>
+          <button class="btn-retry" onclick="document.getElementById('form-error').style.display='none'"><span data-lang="ar">حاول مجدداً</span><span data-lang="fr">Réessayer</span></button>
+        </div>
+
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo-wrap">
+    <img src="assets/images/logo.png" alt="شعار جمعية آفاق جرجرة">
+    <div class="footer-name">
+      آفاق جرجرة — Horizons de Djurdjura
+      <small><span data-lang="ar">الجمعية الثقافية — ولاية تيزي وزو</span><span data-lang="fr">Association Culturelle — Wilaya de Tizi-Ouzou</span></small>
+    </div>
+  </div>
+  <p class="footer-slogan"><span data-lang="ar">من أجل تنمية شاملة ✦ Pour un développement global</span><span data-lang="fr">Pour un développement global ✦ من أجل تنمية شاملة</span></p>
+  <ul class="footer-nav">
+    <li><a href="#about">من نحن</a></li>
+    <li><a href="#clubs">نوادينا</a></li>
+    <li><a href="#activities">أنشطتنا</a></li>
+    <li><a href="#achievements">إنجازاتنا</a></li>
+    <li><a href="#contact">اتصل بنا</a></li>
+  </ul>
+  <div class="footer-div"></div>
+  <p class="footer-copy"><span data-lang="ar">© 2026 جمعية آفاق جرجرة — جميع الحقوق محفوظة</span><span data-lang="fr">© 2026 Association Horizons de Djurdjura — Tous droits réservés</span></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

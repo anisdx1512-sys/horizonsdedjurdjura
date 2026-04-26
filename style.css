@@ -1,0 +1,51 @@
+:root {
+  --navy: #1a3a8f;
+  --navy-deep: #0d2260;
+  --green: #1a7a3c;
+  --green-light: #2ecc71;
+  --cream: #f0f6ff;
+  --text: #0d1f4a;
+  --border: rgba(26,58,143,0.12);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Cairo', sans-serif; background: var(--cream); color: var(--text); line-height: 1.6; }
+
+nav {
+  position: fixed; top:0; width:100%; z-index:1000;
+  background: rgba(13,26,69,0.97); backdrop-filter: blur(10px);
+  height: 72px; display: flex; align-items: center; justify-content: space-between;
+  padding: 0 3rem; border-bottom: 1px solid rgba(212,160,23,0.1);
+}
+
+.nav-brand { display: flex; align-items: center; gap: 1rem; text-decoration: none; }
+.nav-brand img { width: 45px; height: 45px; background: white; border-radius: 50%; padding: 4px; }
+.nav-brand-ar { color: white; font-weight: 700; font-family: 'Amiri', serif; }
+.nav-brand-fr { color: rgba(255,255,255,0.5); font-size: 0.7rem; }
+
+.nav-utils { display: flex; align-items: center; gap: 1.5rem; }
+.nav-menu { display: flex; gap: 1rem; list-style: none; }
+.nav-menu a { color: white; text-decoration: none; font-size: 0.9rem; }
+.nav-cta { background: var(--green); padding: 0.5rem 1.2rem; border-radius: 8px; font-weight: bold; }
+
+.hero { min-height: 100vh; background: linear-gradient(135deg, var(--navy-deep), var(--green)); color: white; display: flex; align-items: center; padding: 0 3rem; position: relative; overflow: hidden;}
+
+.hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; max-width: 1200px; margin: auto; z-index: 1; }
+.hero-title { font-size: 3.5rem; font-family: 'Amiri', serif; line-height: 1.2; margin-bottom: 1rem; }
+.hero-stats-row { display: flex; gap: 2rem; margin: 2rem 0; }
+
+.contact-form { background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+.fg { margin-bottom: 1.2rem; }
+.fg label { display: block; margin-bottom: 0.5rem; font-weight: bold; font-size: 0.9rem; }
+.fg input, .fg textarea { width: 100%; padding: 0.8rem; border: 1px solid var(--border); border-radius: 8px; font-family: inherit; }
+
+.btn-send { background: var(--navy-deep); color: white; border: none; padding: 1rem; border-radius: 8px; width: 100%; cursor: pointer; font-weight: bold; }
+
+.loader {
+    width: 20px; height: 20px; border: 3px solid #FFF; border-bottom-color: transparent;
+    border-radius: 50%; display: inline-block; animation: rotation 1s linear infinite;
+}
+@keyframes rotation { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+/* RTL/LTR Dynamic Adjustments */
+html[dir="ltr"] .hero-title { font-size: 3rem; }

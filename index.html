@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>جمعية آفاق جرجرة — Horizons de Djurdjura</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="جمعية آفاق جرجرة الثقافية لولاية تيزي وزو - متخصصة في علم الفلك، المسرح، والأنشطة العلمية للشباب.">
+    <meta name="keywords" content="آفاق جرجرة, تيزي وزو, علم الفلك في الجزائر, جمعية ثقافية, نادي الفلك, Horizons de Djurdjura">
+    <meta property="og:title" content="جمعية آفاق جرجرة">
+    <meta property="og:description" content="نحو آفاق بلا حدود - الجمعية الثقافية الرائدة في تيزي وزو.">
+    <meta property="og:image" content="assets/images/logo.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;700;900&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <!-- Cloudflare Turnstile Script -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body>
+
+<nav>
+    <a href="#home" class="nav-brand">
+        <img src="assets/images/logo.png" alt="شعار جمعية آفاق جرجرة - Logo Association">
+        <div class="nav-brand-text">
+            <div class="nav-brand-ar" data-i18n="nav_brand">آفاق جرجرة</div>
+            <div class="nav-brand-fr">Horizons de Djurdjura</div>
+        </div>
+    </a>
+    <div class="nav-utils">
+        <div class="lang-switcher">
+            <button class="lang-btn active" id="btn-ar" onclick="switchLang('ar')">AR</button>
+            <button class="lang-btn" id="btn-fr" onclick="switchLang('fr')">FR</button>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#about" data-i18n="nav_about">من نحن</a></li>
+            <li><a href="#clubs" data-i18n="nav_clubs">نوادينا</a></li>
+            <li><a href="#activities" data-i18n="nav_activities">أنشطتنا</a></li>
+            <li><a href="#achievements" data-i18n="nav_achievements">إنجازاتنا</a></li>
+            <li><a href="#contact" class="nav-cta" data-i18n="nav_contact">اتصل بنا</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="hero" id="home">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-inner">
+        <div class="hero-left">
+            <div class="hero-slogan-badge" data-i18n="hero_badge">✦ ولاية تيزي وزو — منذ 2010 ✦</div>
+            <h1 class="hero-title" id="main_title"></h1>
+            <p class="hero-sub" data-i18n="hero_sub">الجمعية الثقافية — ولاية تيزي وزو</p>
+            
+            <div class="hero-stats-row">
+                <div class="hstat"><span class="hstat-n">16+</span><div class="hstat-l" data-i18n="stat_years">سنة نشاط</div></div>
+                <div class="hstat"><span class="hstat-n">5</span><div class="hstat-l" data-i18n="stat_clubs">نوادٍ متخصصة</div></div>
+                <div class="hstat"><span class="hstat-n">100+</span><div class="hstat-l" data-i18n="stat_acts">نشاط موثق</div></div>
+            </div>
+            
+            <div class="hero-btns">
+                <a href="#clubs" class="btn-primary" data-i18n="btn_explore">اكتشف نوادينا ←</a>
+                <a href="#contact" class="btn-secondary" data-i18n="btn_join">انخرط معنا</a>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="logo-showcase">
+                <div class="logo-img-wrap">
+                    <img src="assets/images/logo.png" alt="Association Horizons de Djurdjura Logo">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Form Section -->
+<section class="section" id="contact">
+    <div class="section-inner">
+        <div class="section-header center reveal">
+            <h2 class="s-title" data-i18n="contact_title">اتصل بنا</h2>
+            <div class="s-line"></div>
+        </div>
+        
+        <div class="contact-layout">
+            <div class="contact-form reveal">
+                <form id="contactForm">
+                    <div class="fg">
+                        <label data-i18n="form_name">الاسم واللقب *</label>
+                        <input type="text" name="name" required id="form_name_input">
+                    </div>
+                    <div class="fg">
+                        <label data-i18n="form_email">البريد الإلكتروني *</label>
+                        <input type="email" name="email" required id="form_email_input">
+                    </div>
+                    <div class="fg">
+                        <label data-i18n="form_msg">رسالتك *</label>
+                        <textarea name="message" required id="form_msg_input"></textarea>
+                    </div>
+
+                    <!-- Cloudflare Turnstile -->
+                    <div class="cf-turnstile" data-sitekey="YOUR_SITE_KEY"></div>
+
+                    <button type="submit" class="btn-send" id="btn-submit">
+                        <span id="btn-text" data-i18n="btn_send">إرسال الرسالة ←</span>
+                        <div id="btn-loader" class="loader" style="display:none"></div>
+                    </button>
+                </form>
+                <div id="form-message"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -81,15 +81,15 @@ const obs = new IntersectionObserver(entries => {
 }, { threshold: 0.08 });
 els.forEach(e => obs.observe(e));
 
-// ─── NETLIFY FORM HANDLER ───
-async function handleNetlifySubmit(e) {
+// ─── CLOUDFLARE FORM HANDLER ───
+async function handleFormSubmit(e) {
   e.preventDefault();
   const form = document.getElementById('contactForm');
   const btnSubmit = document.getElementById('btn-submit');
   const btnText = document.getElementById('btn-text');
   const btnSpinner = document.getElementById('btn-spinner');
 
-  // Show loading
+  // إظهار حالة التحميل
   btnSubmit.disabled = true;
   btnText.style.display = 'none';
   btnSpinner.style.display = 'inline';
@@ -97,17 +97,18 @@ async function handleNetlifySubmit(e) {
 
   try {
     const formData = new FormData(form);
-    const response = await fetch('/', {
+    
+    // ⚠️ استبدل هذا الرابط برابطك الخاص (سنشرحه في الخطوة 3)
+    const response = await fetch('YOUR_API_ENDPOINT_HERE', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData).toString()
+      headers: { 'Accept': 'application/json' },
+      body: formData
     });
 
     if (response.ok) {
-      // Success
+      // نجاح الإرسال
       form.style.display = 'none';
       document.getElementById('form-success').style.display = 'block';
-      // Apply current language to success box
       document.getElementById('form-success').querySelectorAll('[data-lang]').forEach(el => {
         el.style.display = el.getAttribute('data-lang') === currentLang ? 'inline' : 'none';
       });
@@ -115,7 +116,7 @@ async function handleNetlifySubmit(e) {
       throw new Error('Network response was not ok');
     }
   } catch (error) {
-    // Error
+    // فشل الإرسال
     btnSubmit.disabled = false;
     btnText.style.display = 'inline';
     btnSpinner.style.display = 'none';

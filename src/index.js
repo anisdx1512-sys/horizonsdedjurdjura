@@ -7,7 +7,6 @@ export default {
         const formData = await request.formData();
         const data = Object.fromEntries(formData.entries());
 
-        // تحقق من وجود المفتاح
         if (!env.RESEND_API_KEY) {
           return new Response(JSON.stringify({ error: "RESEND_API_KEY missing" }), { status: 500 });
         }
@@ -19,7 +18,7 @@ export default {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            from: "Afaq Website <onboarding@resend.dev>",
+            from: "Horizons Djurdjura Website <onboarding@resend.dev>",
             to: ["horizonsdedjurdjura15@gmail.com"],
             subject: `رسالة جديدة من: ${data.name}`,
             html: `
@@ -48,7 +47,6 @@ export default {
       }
     }
 
-    // الملفات الثابتة
     if (env.ASSETS) {
       return env.ASSETS.fetch(request);
     }

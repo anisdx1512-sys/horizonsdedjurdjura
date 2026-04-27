@@ -19,7 +19,7 @@ export default {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            from: "Horizons Djurdjura Website <onboarding@resend.dev>",
+            from: "Afaq Website <onboarding@resend.dev>",
             to: ["horizonsdedjurdjura15@gmail.com"],
             subject: `رسالة جديدة من: ${data.name}`,
             html: `

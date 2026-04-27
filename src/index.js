@@ -7,6 +7,11 @@ export default {
         const formData = await request.formData();
         const data = Object.fromEntries(formData.entries());
 
+        // تحقق من وجود المفتاح
+        if (!env.RESEND_API_KEY) {
+          return new Response(JSON.stringify({ error: "RESEND_API_KEY missing" }), { status: 500 });
+        }
+
         const res = await fetch("https://api.resend.com/emails", {
           method: "POST",
           headers: {
@@ -23,8 +28,7 @@ export default {
               <p><strong>الهاتف:</strong> ${data.phone || "—"}</p>
               <p><strong>الإيميل:</strong> ${data.email}</p>
               <p><strong>الموضوع:</strong> ${data.subject}</p>
-              <p><strong>الرسالة:</strong></p>
-              <p>${data.message}</p>
+              <p><strong>الرسالة:</strong> ${data.message}</p>
             `,
           }),
         });
@@ -32,21 +36,23 @@ export default {
         if (res.ok) {
           return new Response(JSON.stringify({ message: "Success" }), {
             status: 200,
-            headers: { "Content-Type": "application/json" }
+            headers: { "Content-Type": "application/json" },
           });
         } else {
-          const err = await res.text();
-          return new Response(JSON.stringify({ message: "Resend Error", detail: err }), {
-            status: 500,
-            headers: { "Content-Type": "application/json" }
-          });
+          const errText = await res.text();
+          return new Response(JSON.stringify({ error: errText }), { status: 500 });
         }
+
       } catch (e) {
         return new Response(JSON.stringify({ error: e.message }), { status: 500 });
       }
     }
 
-    // باقي الطلبات → الملفات الثابتة
-    return env.ASSETS.fetch(request);
+    // الملفات الثابتة
+    if (env.ASSETS) {
+      return env.ASSETS.fetch(request);
+    }
+
+    return new Response("Not found", { status: 404 });
   }
 };

@@ -588,7 +588,7 @@ nav {
   font-size: 0.95rem; color: var(--navy-mid);
 }
 .cinfo-content strong { display: block; font-size: 0.72rem; color: var(--text-light); font-weight: 600; letter-spacing: 0.05em; margin-bottom: 2px; }
-.cinfo-content span { font-size: 0.9rem; color: var(--text); line-height: 1.5; word-break: break-all; overflow-wrap: anywhere; }
+.cinfo-content span { font-size: 0.9rem; color: var(--text); line-height: 1.5; word-break: break-all; overflow-wrap: anywhere; unicode-bidi: plaintext; }
 
 .social-row { display: flex; gap: 0.7rem; margin-top: 1.8rem; flex-wrap: wrap; }
 .soc-btn {

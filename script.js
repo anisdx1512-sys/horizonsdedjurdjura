@@ -173,3 +173,64 @@ function toggleTheme() {
   }
 })();
  
+// ─── CHATBOT ───
+function toggleChat() {
+  const win = document.getElementById('chat-window');
+  const fab = document.getElementById('chat-fab');
+  const isOpen = win.classList.toggle('open');
+  fab.classList.toggle('active', isOpen);
+  fab.textContent = isOpen ? '✕' : '💬';
+  if (isOpen) document.getElementById('chat-input').focus();
+}
+
+function handleChatKey(e) {
+  if (e.key === 'Enter') sendChatMessage();
+}
+
+const chatResponses = {
+  ar: {
+    default: 'شكراً على سؤالك! للمزيد من المعلومات تواصل معنا عبر نموذج الاتصال أو على الهاتف.',
+    فلك: 'نادي الفلك ينظم جلسات رصد ليلية وورشات علمية. يمكنك الانضمام عبر نموذج الاتصال!',
+    انخراط: 'للانخراط في الجمعية، أرسل لنا رسالة عبر قسم "اتصل بنا" أو اتصل بنا على 0556 88 91 45.',
+    نادي: 'لدينا 5 نوادٍ متخصصة: الفلك، المسرح، السمعي البصري، الأحياء المائية، والتجميع!',
+    مرحبا: 'أهلاً وسهلاً! كيف يمكنني مساعدتك؟',
+  },
+  fr: {
+    default: 'Merci pour votre question! Pour plus d\'infos, contactez-nous via le formulaire ou par téléphone.',
+    astronomie: 'Le club d\'astronomie organise des sessions d\'observation et des ateliers. Rejoignez-nous!',
+    adhésion: 'Pour adhérer, envoyez-nous un message via la section Contact ou appelez le 0556 88 91 45.',
+    club: 'Nous avons 5 clubs: Astronomie, Théâtre, Audiovisuel, Aquariophilie et Collection!',
+    bonjour: 'Bienvenue! Comment puis-je vous aider?',
+  }
+};
+
+function sendChatMessage() {
+  const input = document.getElementById('chat-input');
+  const messages = document.getElementById('chat-messages');
+  const text = input.value.trim();
+  if (!text) return;
+
+  // رسالة المستخدم
+  const userMsg = document.createElement('div');
+  userMsg.className = 'chat-msg user';
+  userMsg.textContent = text;
+  messages.appendChild(userMsg);
+  input.value = '';
+  messages.scrollTop = messages.scrollHeight;
+
+  // رد المساعد
+  setTimeout(() => {
+    const botMsg = document.createElement('div');
+    botMsg.className = 'chat-msg bot';
+    const lang = currentLang;
+    const responses = chatResponses[lang] || chatResponses.ar;
+    const lower = text.toLowerCase();
+    let reply = responses.default;
+    for (const [key, val] of Object.entries(responses)) {
+      if (key !== 'default' && lower.includes(key)) { reply = val; break; }
+    }
+    botMsg.textContent = reply;
+    messages.appendChild(botMsg);
+    messages.scrollTop = messages.scrollHeight;
+  }, 600);
+}

@@ -622,7 +622,33 @@
   <div class="footer-div"></div>
   <p class="footer-copy"><span data-lang="ar">© 2026 جمعية آفاق جرجرة — جميع الحقوق محفوظة</span><span data-lang="fr">© 2026 Association Horizons de Djurdjura — Tous droits réservés</span></p>
 </footer>
+  
+<!-- CHATBOT -->
+<button class="chat-fab" id="chat-fab" onclick="toggleChat()" aria-label="المساعد الذكي">💬</button>
 
+<div class="chat-window" id="chat-window">
+  <div class="chat-header">
+    <div class="chat-header-info">
+      <div class="chat-avatar">🤖</div>
+      <div>
+        <div class="chat-name"><span data-lang="ar">مساعد آفاق جرجرة</span><span data-lang="fr">Assistant Horizons</span></div>
+        <div class="chat-status"><span data-lang="ar">متصل الآن</span><span data-lang="fr">En ligne</span></div>
+      </div>
+    </div>
+    <button class="chat-close" onclick="toggleChat()">✕</button>
+  </div>
+  <div class="chat-messages" id="chat-messages">
+    <div class="chat-msg bot">
+      <span data-lang="ar">مرحباً! كيف يمكنني مساعدتك اليوم؟ يمكنك السؤال عن نوادينا أو أنشطتنا أو طريقة الانخراط.</span>
+      <span data-lang="fr">Bonjour! Comment puis-je vous aider aujourd'hui? Vous pouvez poser des questions sur nos clubs, activités ou l'adhésion.</span>
+    </div>
+  </div>
+  <div class="chat-input-area">
+    <input type="text" class="chat-input" id="chat-input" placeholder="اكتب رسالتك..." onkeypress="handleChatKey(event)">
+    <button class="chat-send" onclick="sendChatMessage()">➤</button>
+  </div>
+</div>
+  
 <script src="script.js"></script>
 </body>
 </html>

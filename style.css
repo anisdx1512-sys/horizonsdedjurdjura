@@ -1005,3 +1005,148 @@ textarea:valid:not(:placeholder-shown) {
   .activities-layout { grid-template-columns: 1fr !important; }
   .btn-primary, .btn-secondary { width: 100%; }
 }
+/* ─── DARK MODE ADDITIONS ─── */
+/* أضف هذا الكود في نهاية ملف style.css */
+
+/* زر تبديل الثيم */
+.theme-toggle {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 100px;
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.25s;
+  color: white;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
+.theme-toggle:hover {
+  background: rgba(255,255,255,0.2);
+  transform: scale(1.1);
+}
+
+/* ─── متغيرات الوضع الليلي ─── */
+body.dark-theme {
+  --cream: #0f1923;
+  --off-white: #141e2a;
+  --white: #1a2535;
+  --text: #e8edf5;
+  --text-light: #9ab0c8;
+  --border: rgba(100,150,200,0.15);
+  --navy-deep: #070e1a;
+  --navy: #0d1f3c;
+  --navy-mid: #1a3a6b;
+  background: #0f1923;
+  color: #e8edf5;
+}
+
+/* البطاقات في الوضع الليلي */
+body.dark-theme .club-card,
+body.dark-theme .act-card,
+body.dark-theme .contact-card,
+body.dark-theme .contact-form,
+body.dark-theme .about-card-inner {
+  background: #1a2535;
+  border-color: rgba(100,150,200,0.15);
+}
+
+body.dark-theme .act-card {
+  background: #1a2535;
+}
+body.dark-theme .act-card:hover {
+  background: #1f2e42;
+}
+
+body.dark-theme .club-card-body h3,
+body.dark-theme .act-name,
+body.dark-theme .s-title,
+body.dark-theme .contact-card h3,
+body.dark-theme .contact-form h3,
+body.dark-theme .ach-title {
+  color: #e8edf5;
+}
+
+body.dark-theme .club-card-body p,
+body.dark-theme .act-desc,
+body.dark-theme .s-desc,
+body.dark-theme .about-body p {
+  color: #9ab0c8;
+}
+
+/* الـ sections الفاتحة */
+body.dark-theme #about,
+body.dark-theme #activities {
+  background: #111d2b;
+}
+
+body.dark-theme #clubs {
+  background: #0f1923;
+}
+
+body.dark-theme #contact {
+  background: #0f1923;
+}
+
+/* الـ pillars */
+body.dark-theme .pillar {
+  background: #1a2535;
+  border-color: rgba(100,150,200,0.15);
+}
+body.dark-theme .pillar-name { color: #e8edf5; }
+body.dark-theme .pillar-desc { color: #9ab0c8; }
+
+/* حقول نموذج الاتصال */
+body.dark-theme .fg input,
+body.dark-theme .fg textarea,
+body.dark-theme .fg select {
+  background: #111d2b;
+  border-color: rgba(100,150,200,0.2);
+  color: #e8edf5;
+}
+body.dark-theme .fg input:focus,
+body.dark-theme .fg textarea:focus,
+body.dark-theme .fg select:focus {
+  background: #1a2535;
+  border-color: var(--green-mid);
+}
+body.dark-theme .fg label {
+  color: #9ab0c8;
+}
+
+/* Turnstile widget */
+body.dark-theme .cf-turnstile {
+  filter: invert(0.85) hue-rotate(180deg);
+}
+
+/* nav في الوضع الليلي */
+body.dark-theme nav {
+  background: rgba(7,14,26,0.97);
+}
+
+/* footer */
+body.dark-theme footer {
+  background: #070e1a;
+}
+
+/* Cards hover */
+body.dark-theme .club-card:hover {
+  box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+}
+
+/* الـ Turnstile container */
+.turnstile-wrap {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* على الشاشات الصغيرة */
+@media (max-width: 768px) {
+  .theme-toggle {
+    width: 30px; height: 30px;
+    font-size: 0.85rem;
+    margin-right: 0.3rem;
+  }
+}

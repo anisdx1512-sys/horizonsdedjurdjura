@@ -175,16 +175,17 @@ function toggleTheme() {
  
 // ─── CHATBOT ───
 function toggleChat() {
-  const win = document.getElementById('chat-window');
-  const fab = document.getElementById('chat-fab');
-  const isOpen = win.classList.toggle('open');
-  fab.classList.toggle('active', isOpen);
-  fab.textContent = isOpen ? '✕' : '💬';
-  if (isOpen) document.getElementById('chat-input').focus();
-}
-
-function handleChatKey(e) {
-  if (e.key === 'Enter') sendChatMessage();
+  const chatWin = document.getElementById('chat-window');
+  const chatFab = document.getElementById('chat-fab');
+  const isOpen = chatWin.classList.toggle('open');
+  
+  // تغيير أيقونة الزر
+  chatFab.innerHTML = isOpen ? '✕' : '💬';
+  
+  if (isOpen) {
+    // تركيز تلقائي على حقل الإدخال عند الفتح
+    setTimeout(() => document.getElementById('chat-input').focus(), 300);
+  }
 }
 
 const chatResponses = {

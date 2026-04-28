@@ -7,11 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 
 <!-- NAV -->
 <nav>
@@ -23,7 +21,8 @@
     </div>
   </a>
   <div style="display:flex;align-items:center;gap:0.5rem;">
-    <div class="lang-switcher"><button class="theme-toggle" id="theme-toggle-btn" onclick="toggleTheme()">🌙</button>
+    <button class="theme-toggle" id="theme-toggle-btn" onclick="toggleTheme()">🌙</button>
+    <div class="lang-switcher">
       <button class="lang-btn active" onclick="setLang('ar')" id="btn-ar">AR</button>
       <button class="lang-btn" onclick="setLang('fr')" id="btn-fr">FR</button>
     </div>
@@ -46,11 +45,13 @@
     <div class="hero-left">
       <div class="hero-slogan-badge"><span data-lang="ar">✦ ولاية تيزي وزو — منذ 2010 ✦</span><span data-lang="fr">✦ Wilaya de Tizi-Ouzou — Depuis 2010 ✦</span></div>
       <h1 class="hero-title">
-        <span data-lang="ar">جمعية آفاق جرجرة<em class="hero-title-accent" style="display:block">نحو آفاق بلا حدود</em></span><span data-lang="fr">Association Horizons de Djurdjura<em class="hero-title-accent" style="display:block;font-style:normal">Vers des horizons sans limites</em></span>
+        <span data-lang="ar">جمعية آفاق جرجرة<em class="hero-title-accent" style="display:block">نحو آفاق بلا حدود</em></span>
+        <span data-lang="fr">Association Horizons de Djurdjura<em class="hero-title-accent" style="display:block;font-style:normal">Vers des horizons sans limites</em></span>
       </h1>
       <p class="hero-fr"><span data-lang="ar">الجمعية الثقافية — ولاية تيزي وزو</span><span data-lang="fr">Association Culturelle — Wilaya de Tizi-Ouzou</span></p>
       <div class="hero-slogan">
-        <span data-lang="ar">من أجل تنمية شاملة<span style="color:var(--green-light);display:block;font-size:0.88rem">Pour un développement global</span></span><span data-lang="fr">Pour un développement global<span style="color:var(--green-light);display:block;font-size:0.88rem">من أجل تنمية شاملة</span></span>
+        <span data-lang="ar">من أجل تنمية شاملة<span style="color:var(--green-light);display:block;font-size:0.88rem">Pour un développement global</span></span>
+        <span data-lang="fr">Pour un développement global<span style="color:var(--green-light);display:block;font-size:0.88rem">من أجل تنمية شاملة</span></span>
       </div>
       <div class="hero-stats-row">
         <div class="hstat"><span class="hstat-n">16+</span><div class="hstat-l"><span data-lang="ar">سنة نشاط</span><span data-lang="fr">Ans d'activité</span></div></div>
@@ -87,13 +88,16 @@
           <div class="s-line"></div>
         </div>
         <p>
-          <span data-lang="ar"><strong><span data-lang="ar">الجمعية الثقافية لولاية تيزي وزو "آفاق جرجرة"</span><span data-lang="fr">Association Culturelle de la Wilaya de Tizi-Ouzou "Horizons de Djurdjura"</span></strong> هي جمعية ولائية ذات طابع ثقافي تعنى بالقضايا الثقافية تأسست سنة 2010، شعارها <em>"من أجل تنمية شاملة"</em>. تنشط في مجال الثقافة العلمية والفنية، وتنمية قدرات الشباب والأطفال من خلال شبكة من النوادي المتخصصة.</span><span data-lang="fr">L'<strong>Association Culturelle de la Wilaya de Tizi-Ouzou "Horizons de Djurdjura"</strong> est une association bénévole à but non lucratif fondée en 2010, avec comme devise <em>"Pour un développement global"</em>. Elle œuvre dans le domaine de la culture scientifique et artistique, et le développement des capacités des jeunes et des enfants à travers un réseau de clubs spécialisés.</span>
+          <span data-lang="ar"><strong>الجمعية الثقافية لولاية تيزي وزو "آفاق جرجرة"</strong> هي جمعية ولائية ذات طابع ثقافي تعنى بالقضايا الثقافية تأسست سنة 2010، شعارها <em>"من أجل تنمية شاملة"</em>. تنشط في مجال الثقافة العلمية والفنية، وتنمية قدرات الشباب والأطفال من خلال شبكة من النوادي المتخصصة.</span>
+          <span data-lang="fr">L'<strong>Association Culturelle de la Wilaya de Tizi-Ouzou "Horizons de Djurdjura"</strong> est une association bénévole à but non lucratif fondée en 2010, avec comme devise <em>"Pour un développement global"</em>. Elle œuvre dans le domaine de la culture scientifique et artistique, et le développement des capacités des jeunes et des enfants à travers un réseau de clubs spécialisés.</span>
         </p>
         <p>
-          <span data-lang="ar">تؤمن الجمعية بأن التنمية الحقيقية تبدأ من الإنسان — من تنمية فضوله المعرفي، إبداعه الفني، وانتمائه لمحيطه الطبيعي والثقافي     .</span><span data-lang="fr">L'association croit que le vrai développement commence par l'être humain — en cultivant sa curiosité intellectuelle, sa créativité artistique et son appartenance à son environnement naturel et culturel au cœur de la région de Djurdjura.</span>
+          <span data-lang="ar">تؤمن الجمعية بأن التنمية الحقيقية تبدأ من الإنسان — من تنمية فضوله المعرفي، إبداعه الفني، وانتمائه لمحيطه الطبيعي والثقافي.</span>
+          <span data-lang="fr">L'association croit que le vrai développement commence par l'être humain — en cultivant sa curiosité intellectuelle, sa créativité artistique et son appartenance à son environnement naturel et culturel au cœur de la région de Djurdjura.</span>
         </p>
         <p>
-          <span data-lang="ar">معترف بها وطنياً من طرف وزارة الشباب، وحائزة على تكريم رسمي سنة 2025 تقديراً لمساهماتها في إثراء الحركة الجمعوية الشبابية بولاية تيزي وزو.</span><span data-lang="fr">Reconnue au niveau national par le Ministère de la Jeunesse et lauréate d'une distinction officielle en 2025, en reconnaissance de ses contributions à l'enrichissement du mouvement associatif jeunesse de la Wilaya de Tizi-Ouzou.</span>
+          <span data-lang="ar">معترف بها وطنياً من طرف وزارة الشباب، وحائزة على تكريم رسمي سنة 2025 تقديراً لمساهماتها في إثراء الحركة الجمعوية الشبابية بولاية تيزي وزو.</span>
+          <span data-lang="fr">Reconnue au niveau national par le Ministère de la Jeunesse et lauréate d'une distinction officielle en 2025, en reconnaissance de ses contributions à l'enrichissement du mouvement associatif jeunesse de la Wilaya de Tizi-Ouzou.</span>
         </p>
         <div class="about-pillars">
           <div class="pillar">
@@ -121,7 +125,7 @@
       <div class="reveal">
         <div class="about-card">
           <div class="about-card-logo">
-            <img src="assets/images/about-logo.png" alt="شعار الجمعية">
+            <img src="assets/images/logo.png" alt="شعار الجمعية">
           </div>
           <h3><span data-lang="ar">البطاقة الرسمية للجمعية</span><span data-lang="fr">Fiche officielle de l'association</span></h3>
           <div class="info-row">
@@ -278,12 +282,13 @@
 <!-- CLUBS -->
 <section class="section" id="clubs">
   <div class="section-inner">
-    <div class="club-card c-astronomy featured reveal">
+    <div class="section-header center reveal">
       <div class="s-eyebrow"><span data-lang="ar">نوادي الجمعية</span><span data-lang="fr">Nos clubs</span></div>
       <h2 class="s-title"><span data-lang="ar">نوادينا <em>المتخصصة</em></span><span data-lang="fr">Nos clubs <em>spécialisés</em></span></h2>
       <div class="s-line"></div>
       <p class="s-desc">
-        <span data-lang="ar">تمتلك جمعية آفاق جرجرة شبكة من النوادي المتخصصة التي تستهدف الشباب من مختلف الاهتمامات والمواهب</span><span data-lang="fr">L'association Horizons de Djurdjura dispose d'un réseau de clubs spécialisés ciblant les jeunes aux intérêts et talents variés</span>
+        <span data-lang="ar">تمتلك جمعية آفاق جرجرة شبكة من النوادي المتخصصة التي تستهدف الشباب من مختلف الاهتمامات والمواهب</span>
+        <span data-lang="fr">L'association Horizons de Djurdjura dispose d'un réseau de clubs spécialisés ciblant les jeunes aux intérêts et talents variés</span>
       </p>
     </div>
     <div class="clubs-grid">
@@ -294,15 +299,16 @@
         <div class="club-card-body">
           <h3><a href="https://astronomy-kids-guide.hd15.workers.dev/" target="_blank" style="color:inherit;text-decoration:none;border-bottom:2px solid var(--green-light);padding-bottom:2px;">نادي آفاق للفلك — Club d'Astronomie</a></h3>
           <p>
-            <span data-lang="ar">. ينظم جلسات رصد ليلية، ورشات علمية تطبيقية، وسهرات فلكية على جبال جرجرة. يمتلك تلسكوبين Bresser 130/650 EQ ومعدات رصد متطورة. معترف به على المستوى الوطني.</span><span data-lang="fr">Le seul club d'astronomie actif de la Wilaya de Tizi-Ouzou. Organise des sessions d'observation nocturne, des ateliers scientifiques, et des soirées astronomiques sur les montagnes de Djurdjura. Dispose de deux télescopes Bresser 130/650 EQ.</span>
+            <span data-lang="ar">ينظم جلسات رصد ليلية، ورشات علمية تطبيقية، وسهرات فلكية على جبال جرجرة. يمتلك تلسكوبين Bresser 130/650 EQ ومعدات رصد متطورة. معترف به على المستوى الوطني.</span>
+            <span data-lang="fr">Le seul club d'astronomie actif de la Wilaya de Tizi-Ouzou. Organise des sessions d'observation nocturne, des ateliers scientifiques, et des soirées astronomiques sur les montagnes de Djurdjura. Dispose de deux télescopes Bresser 130/650 EQ.</span>
           </p>
           <div class="featured-achievements">
             <span class="feat-tag">🥇 اللقاء الوطني للفلك 2025</span>
             <span class="feat-tag">🏅 الصالون الجهوي — ميلة 2025</span>
             <span class="feat-tag">⭐ تكريم وزارة الشباب 2025</span>
             <span class="feat-tag">🥇 2016 المهرجان الوطني الخامس للأنشطة العلمية والفلكية للأطفال أم البواقي</span>
-            <span class="feat-tag">🏅 االمعرض الوطني لعلم الفلك سطيف 2016</span>
-            <span class="feat-tag">⭐ 2014 اللقاء الوطني لعلم الفلك </span>
+            <span class="feat-tag">🏅 المعرض الوطني لعلم الفلك سطيف 2016</span>
+            <span class="feat-tag">⭐ 2014 اللقاء الوطني لعلم الفلك</span>
             <span class="feat-tag">🔭 10+ جلسات رصد سنوياً</span>
           </div>
         </div>
@@ -457,7 +463,7 @@
         <div class="contact-card">
           <div class="contact-card-logo">
             <img src="assets/images/logo.png" alt="شعار جمعية آفاق جرجرة">
-            </div>
+          </div>
           <h3>جمعية آفاق جرجرة</h3>
           <p class="slogan-line"><span data-lang="ar">من أجل تنمية شاملة — Pour un développement global</span><span data-lang="fr">Pour un développement global — من أجل تنمية شاملة</span></p>
           <div class="cinfo">
@@ -495,15 +501,11 @@
           </div>
         </div>
       </div>
-      <div class="turnstile-wrap">
-  <div class="cf-turnstile" data-sitekey="0x4AAAAAADE5VHNqFISUxvTG" data-theme="auto"></div>
-</div>
+
       <div class="contact-form reveal">
         <h3><span data-lang="ar">أرسل لنا رسالة</span><span data-lang="fr">Envoyez-nous un message</span></h3>
 
-        <!-- CLOUDFLARE Form -->
         <form id="contactForm" onsubmit="handleFormSubmit(event)">
-
           <div class="fg-row">
             <div class="fg">
               <label><span data-lang="ar">الاسم واللقب *</span><span data-lang="fr">Nom et prénom *</span></label>
@@ -541,14 +543,17 @@
             <textarea name="message" required id="inp-message" placeholder="اكتب رسالتك هنا..."></textarea>
           </div>
 
-          <!-- Submit button -->
+          <!-- Turnstile داخل الفورم -->
+          <div class="turnstile-wrap">
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAADE5VHNqFISUxvTG" data-theme="auto"></div>
+          </div>
+
           <button type="submit" class="btn-send" id="btn-submit">
             <span id="btn-text"><span data-lang="ar">إرسال الرسالة ←</span><span data-lang="fr">Envoyer le message →</span></span>
             <span id="btn-spinner" style="display:none">⏳</span>
           </button>
         </form>
 
-        <!-- Success message -->
         <div class="form-success-box" id="form-success" style="display:none">
           <div class="fsb-icon">✅</div>
           <div class="fsb-title"><span data-lang="ar">تم إرسال رسالتك بنجاح!</span><span data-lang="fr">Message envoyé avec succès!</span></div>
@@ -556,15 +561,12 @@
           <button class="btn-new-msg" onclick="resetForm()"><span data-lang="ar">إرسال رسالة أخرى</span><span data-lang="fr">Envoyer un autre message</span></button>
         </div>
 
-        <!-- Error message -->
         <div class="form-error-box" id="form-error" style="display:none">
           <div class="fsb-icon">❌</div>
           <div class="fsb-title"><span data-lang="ar">حدث خطأ أثناء الإرسال</span><span data-lang="fr">Erreur lors de l'envoi</span></div>
           <div class="fsb-sub"><span data-lang="ar">يرجى المحاولة مجدداً أو التواصل معنا مباشرةً عبر الهاتف.</span><span data-lang="fr">Veuillez réessayer ou nous contacter directement par téléphone.</span></div>
           <button class="btn-retry" onclick="document.getElementById('form-error').style.display='none'"><span data-lang="ar">حاول مجدداً</span><span data-lang="fr">Réessayer</span></button>
         </div>
-
-      </div>
       </div>
     </div>
   </div>

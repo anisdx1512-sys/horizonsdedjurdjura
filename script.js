@@ -205,33 +205,50 @@ const chatResponses = {
   }
 };
 
-function sendChatMessage() {
+async function sendChatMessage() {
   const input = document.getElementById('chat-input');
-  const messages = document.getElementById('chat-messages');
+  const messagesContainer = document.getElementById('chat-messages');
   const text = input.value.trim();
+  
   if (!text) return;
 
-  // رسالة المستخدم
+  // 1. عرض رسالة المستخدم
   const userMsg = document.createElement('div');
   userMsg.className = 'chat-msg user';
   userMsg.textContent = text;
-  messages.appendChild(userMsg);
+  messagesContainer.appendChild(userMsg);
   input.value = '';
-  messages.scrollTop = messages.scrollHeight;
+  messagesContainer.scrollTop = messagesContainer.scrollHeight;
 
-  // رد المساعد
-  setTimeout(() => {
+  // 2. عرض مؤشر التحميل (Loading)
+  const loadingMsg = document.createElement('div');
+  loadingMsg.className = 'chat-msg bot loading-dots';
+  loadingMsg.id = 'chat-loading';
+  loadingMsg.textContent = currentLang === 'ar' ? 'جاري الكتابة...' : 'Écriture...';
+  messagesContainer.appendChild(loadingMsg);
+  messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+  try {
+    // 3. إرسال الطلب للخلفية
+    const response = await fetch('/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: text })
+    });
+
+    const data = await response.json();
+    
+    // 4. إزالة مؤشر التحميل وعرض رد البوت
+    document.getElementById('chat-loading').remove();
     const botMsg = document.createElement('div');
     botMsg.className = 'chat-msg bot';
-    const lang = currentLang;
-    const responses = chatResponses[lang] || chatResponses.ar;
-    const lower = text.toLowerCase();
-    let reply = responses.default;
-    for (const [key, val] of Object.entries(responses)) {
-      if (key !== 'default' && lower.includes(key)) { reply = val; break; }
-    }
-    botMsg.textContent = reply;
-    messages.appendChild(botMsg);
-    messages.scrollTop = messages.scrollHeight;
-  }, 600);
+    botMsg.textContent = data.reply || (currentLang === 'ar' ? 'عذراً، حدث خطأ.' : 'Désolé, une erreur est survenue.');
+    messagesContainer.appendChild(botMsg);
+    
+  } catch (error) {
+    document.getElementById('chat-loading').remove();
+    console.error("Chat Error:", error);
+  }
+  
+  messagesContainer.scrollTop = messagesContainer.scrollHeight;
 }

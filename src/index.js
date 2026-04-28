@@ -88,7 +88,39 @@ export default {
         });
       }
     }
+// ── 4. مسار المساعد الذكي Gemini ──
+if (request.method === "POST" && url.pathname === "/chat") {
+  try {
+    const { message } = await request.json();
+    
+    if (!env.GEMINI_API_KEY) {
+      return new Response(JSON.stringify({ error: "Gemini API Key missing" }), { status: 500 });
+    }
 
+    const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${env.GEMINI_API_KEY}`;
+
+    const response = await fetch(geminiUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        contents: [{ parts: [{ text: message }] }],
+        system_instruction: {
+          parts: [{ text: "أنت مساعد ذكي يمثل جمعية آفاق جرجرة (Horizons de Djurdjura) في تيزي وزو. مهمتك الإجابة باختصار شديد، بلباقة، وباللغة التي يتحدث بها المستخدم (العربية أو الفرنسية). معلوماتك الأساسية: تأسست 2010، رئيسها ليتيمي مراد، نواديها: الفلك، المسرح، السمعي البصري، الأحياء المائية، والتجميع. هدفنا: التنمية الشاملة." }]
+        }
+      })
+    });
+
+    const result = await response.json();
+    const botReply = result.candidates?.[0]?.content?.parts?.[0]?.text || "عذراً، لم أستطع فهم ذلك.";
+
+    return new Response(JSON.stringify({ reply: botReply }), {
+      headers: { "Content-Type": "application/json" }
+    });
+
+  } catch (e) {
+    return new Response(JSON.stringify({ error: e.message }), { status: 500 });
+  }
+}
     // ── الملفات الثابتة ──
     if (env.ASSETS) {
       return env.ASSETS.fetch(request);

@@ -151,3 +151,25 @@ window.addEventListener('scroll', () => {
     l.style.color = l.getAttribute('href') === '#'+cur ? '#7fffb2' : '';
   });
 });
+
+// ─── أضف هذا الكود في نهاية ملف script.js ───
+ 
+// ─── DARK MODE ───
+function toggleTheme() {
+  const body = document.body;
+  const btn = document.getElementById('theme-toggle-btn');
+  const isDark = body.classList.toggle('dark-theme');
+  btn.textContent = isDark ? '☀️' : '🌙';
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+}
+ 
+// استرجاع خيار المستخدم عند تحميل الصفحة
+(function initTheme() {
+  const saved = localStorage.getItem('theme');
+  const btn = document.getElementById('theme-toggle-btn');
+  if (saved === 'dark') {
+    document.body.classList.add('dark-theme');
+    if (btn) btn.textContent = '☀️';
+  }
+})();
+ 

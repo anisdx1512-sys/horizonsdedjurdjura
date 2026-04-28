@@ -13,3 +13,7 @@ RESEND_API_KEY = ""
 [secrets]
 RESEND_API_KEY = "RESEND_API_KEY"
 TURNSTILE_SECRET_KEY = "TURNSTILE_SECRET_KEY"
+
+[vars]
+# المتغيرات العادية توضع هنا
+# GEMINI_API_KEY يتم إضافتها عبر الأمر: wrangler secret put GEMINI_API_KEY

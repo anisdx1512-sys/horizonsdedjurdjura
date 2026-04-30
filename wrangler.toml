@@ -7,7 +7,5 @@ main = "src/index.js"
 directory = "./"
 binding = "ASSETS"
 
-[secrets]
-RESEND_API_KEY = "RESEND_API_KEY"
-TURNSTILE_SECRET_KEY = "TURNSTILE_SECRET_KEY"
-GEMINI_API_KEY = "GEMINI_API_KEY"
+[ai]
+binding = "AI"

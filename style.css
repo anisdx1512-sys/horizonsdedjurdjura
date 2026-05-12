@@ -2382,3 +2382,47 @@ body.dark-theme .chat-input:focus {
   .btn-primary, .btn-secondary { width: 100%; }
   .chat-window { height: 400px; }
 }
+
+
+/* ═══════════════════════════════════════════════════════════════
+   TIMELINE LTR FIX — French Mode
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Move the vertical line from right to left in LTR */
+[dir="ltr"] .timeline-vertical::before,
+.lang-fr .timeline-vertical::before {
+  right: auto;
+  left: 90px;
+}
+
+/* Align year text towards the center (right side of its cell) */
+[dir="ltr"] .tv-year,
+.lang-fr .tv-year {
+  text-align: right;
+}
+
+/* Reverse hover direction for LTR */
+[dir="ltr"] .tv-content:hover,
+.lang-fr .tv-content:hover {
+  transform: translateX(-4px);
+}
+
+/* Mobile LTR fix */
+@media (max-width: 768px) {
+  [dir="ltr"] .timeline-vertical::before,
+  .lang-fr .timeline-vertical::before {
+    right: auto;
+    left: 70px;
+  }
+
+  [dir="ltr"] .tv-item,
+  .lang-fr .tv-item {
+    grid-template-columns: 1fr 16px 60px;
+  }
+
+  [dir="ltr"] .tv-year,
+  .lang-fr .tv-year {
+    text-align: left;
+    order: 3;
+  }
+}

@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <link rel="stylesheet" href="style.css">
+<base target="_blank">
 </head>
 <body>
 
@@ -38,7 +39,7 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero" id="home">
+<section class="hero" id="home" data-hero>
   <div class="hero-bg-pattern"></div>
   <div class="hero-grid-lines"></div>
   <div class="hero-inner">
@@ -422,7 +423,7 @@
     
     <div class="gallery-grid reveal">
       <!-- Image 1 -->
-      <div class="gallery-item">
+      <div class="gallery-item" data-gallery>
         <img src="https://images.unsplash.com/photo-1516339901601-2e1b62dc0c45?q=80&w=800" alt="Astronomy" loading="lazy">
         <div class="gallery-overlay">
           <div class="gallery-info">
@@ -432,7 +433,7 @@
         </div>
       </div>
       <!-- Image 2 -->
-      <div class="gallery-item">
+      <div class="gallery-item" data-gallery>
         <img src="https://images.unsplash.com/photo-1503095396549-807759245b35?q=80&w=800" alt="Theatre" loading="lazy">
         <div class="gallery-overlay">
           <div class="gallery-info">
@@ -442,7 +443,7 @@
         </div>
       </div>
       <!-- Image 3 -->
-      <div class="gallery-item">
+      <div class="gallery-item" data-gallery>
         <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800" alt="Youth" loading="lazy">
         <div class="gallery-overlay">
           <div class="gallery-info">
@@ -452,7 +453,7 @@
         </div>
       </div>
       <!-- Image 4 -->
-      <div class="gallery-item">
+      <div class="gallery-item" data-gallery>
         <img src="https://images.unsplash.com/photo-1459257831348-f0cdd359235f?q=80&w=800" alt="Awards" loading="lazy">
         <div class="gallery-overlay">
           <div class="gallery-info">
@@ -686,5 +687,16 @@
 </div>
   
 <script src="script.js"></script>
+<script>
+// Navbar scroll effect
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('nav');
+  if (window.scrollY > 50) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+});
+</script>
 </body>
 </html>
